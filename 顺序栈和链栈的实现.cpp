@@ -34,5 +34,8 @@ class LinkStack
 template <class DataType>
 void LinkStack<DataType>::Push(DataType x)
 {
-    
+    s = new Node;
+    s -> data = x;          //申请一个数据域为x的结点s
+    s -> next = top;
+    top = s;               // 将结点s插在栈顶
 }
